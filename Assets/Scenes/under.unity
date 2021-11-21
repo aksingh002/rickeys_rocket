@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44755363, g: 0.49307227, b: 0.55146086, a: 1}
+  m_IndirectSpecularColor: {r: 0.44834596, g: 0.4983825, b: 0.57560986, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,13 +209,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.84314233, y: -0.22773354, z: -0.3970614, w: 0.28211802}
+  m_LocalRotation: {x: 0.355509, y: 0.14216162, z: -0.4350981, w: 0.81491905}
   m_LocalPosition: {x: 5.27, y: 4.95, z: 3.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 17.151, y: -123.364, z: -140.479}
+  m_LocalEulerAnglesHint: {x: 44.679, y: -6.27, z: -58.776}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3426905069514352096, guid: 25b31c688dd881b4ab1aa0fa6f6c0e07, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.21
+      value: 3.65
       objectReference: {fileID: 0}
     - target: {fileID: 3426905069514352096, guid: 25b31c688dd881b4ab1aa0fa6f6c0e07, type: 3}
       propertyPath: m_LocalPosition.z
@@ -429,6 +429,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4116334535529833288, guid: 7698234ffa12e244282a9dcaf3918f05, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.731842
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116334535529833288, guid: 7698234ffa12e244282a9dcaf3918f05, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -438,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116334535529833288, guid: 7698234ffa12e244282a9dcaf3918f05, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4116334535529833288, guid: 7698234ffa12e244282a9dcaf3918f05, type: 3}
       propertyPath: m_LocalRotation.w
