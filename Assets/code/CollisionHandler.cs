@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class CollisionHandler : MonoBehaviour
 {   
@@ -13,14 +15,30 @@ public class CollisionHandler : MonoBehaviour
     AudioSource audioSource;
 
     bool isTransitioning = false;
+    bool collisiondisable = false;
 
     void Start()
     {
         audioSource=GetComponent<AudioSource>();
     }
+    void Update() 
+    {
+        respondtodebugkeys();
+    }
+    void respondtodebugkeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            loadnextlevel();
+        }
+        else if(Input.GetKeyDown(KeyCode.C))
+        {
+            collisiondisable = !collisiondisable; // toggle collision
+        }
+    }
     void OnCollisionEnter(Collision other)
     {   
-        if (isTransitioning){return;}
+        if (isTransitioning || collisiondisable){return;}
         switch (other.gameObject.tag)
         {
             case "friendly":
@@ -42,7 +60,7 @@ public class CollisionHandler : MonoBehaviour
         isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(crashsound);
-        GetComponent<movement>().enabled=false;
+        GetComponent<Movement>().enabled=false;
         Invoke("Reloadlevel",delay);
     }
     void nextlevelsequence()
@@ -51,7 +69,7 @@ public class CollisionHandler : MonoBehaviour
         audioSource.Stop();
         audioSource.PlayOneShot(nextlevelsound);
         nextlevelpraticles.Play();
-        GetComponent<movement>().enabled=false;
+        GetComponent<Movement>().enabled=false;
         Invoke("loadnextlevel",delay);
     }
     void loadnextlevel()
