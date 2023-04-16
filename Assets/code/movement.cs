@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
 public class Movement : MonoBehaviour
 {
@@ -38,7 +37,7 @@ public class Movement : MonoBehaviour
 
     void ProcessThrust()
     {
-        if (CrossPlatformInputManager.GetButton("Jump"))
+        if (Input.GetKey(KeyCode.Space))
         {
             StartThrusting();
         }
@@ -50,11 +49,11 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation()
     {
-        if (CrossPlatformInputManager.GetButton("left"))
+        if (Input.GetKey(KeyCode.A))
         {
             RotateLeft();
         }
-        else if (CrossPlatformInputManager.GetButton("right"))
+        else if (Input.GetKey(KeyCode.D))
         {
             RotateRight();
         }
@@ -83,7 +82,7 @@ public class Movement : MonoBehaviour
         mainEngineParticles.Stop();
     }
 
-    public void RotateLeft()
+    private void RotateLeft()
     {
         ApplyRotation(rotationThrust);
         if (!rightThrusterParticles.isPlaying)
@@ -92,7 +91,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    public void RotateRight()
+    private void RotateRight()
     {
         ApplyRotation(-rotationThrust);
         if (!leftThrusterParticles.isPlaying)

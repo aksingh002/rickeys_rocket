@@ -1,0 +1,68 @@
+{
+    "name": "player contro;l",
+    "maps": [
+        {
+            "name": "keyborad",
+            "id": "c07319cf-9412-47be-a9bf-369483e6d1fa",
+            "actions": [
+                {
+                    "name": "fly",
+                    "type": "Button",
+                    "id": "0323ad6a-c4c5-444e-8297-b014670a9673",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "36efad36-8c0a-4f02-b63a-d95172e57c1f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyborad",
+                    "action": "fly",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "999463c6-5f79-4eb8-87a8-58a572003cc9",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "mobile",
+                    "action": "fly",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "mobile",
+            "bindingGroup": "mobile",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "keyborad",
+            "bindingGroup": "keyborad",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
